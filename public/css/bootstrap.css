@@ -3200,8 +3200,8 @@ textarea.input-lg, select[multiple].input-lg {
 
 .btn-primary {
     color: #fff;
-    background-color: #16a085;
-    border-color: #16a090;
+    background-color: #444444;
+    border-color: #444444;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
