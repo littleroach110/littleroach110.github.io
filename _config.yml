@@ -19,8 +19,8 @@ url: http://painterlin.com
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/littleroach.jpg
-favicon: /public/img/littleroach.jpg
+gavatar: /public/img/littleroach.png
+favicon: /public/img/littleroach.png
 
 # google analytics 设置
 ga:
