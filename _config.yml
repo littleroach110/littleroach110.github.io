@@ -20,7 +20,7 @@ rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
 gavatar: /public/img/littleroach.png
-favicon: /public/img/littleroach.png
+favicon: /public/img/littleroach-min.png
 
 # google analytics 设置
 ga:
@@ -28,8 +28,8 @@ ga:
   url: littleroach110.net
 
 # disqus 设置
-disqus:
-  shortname: painterlin
+#disqus:
+#  shortname: painterlin
 
 # 主题设置，自动激活某个标签
 active: 资讯
