@@ -15,7 +15,7 @@ author:
 # 站点信息
 title: littleroach110 小强说
 description: 网络空间安全，人工智能，人生杂烩
-url: http://painterlin.com
+url: http://littleroach110.net
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -25,7 +25,7 @@ favicon: /public/img/littleroach.png
 # google analytics 设置
 ga:
   id: UA-54262064-1 
-  url: painterlin.com
+  url: littleroach110.net
 
 # disqus 设置
 disqus:
