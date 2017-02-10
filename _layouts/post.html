@@ -13,9 +13,22 @@ layout: base
       {{ content }}
     </div>
     <hr>
-    {% include page_pv.html %}
+    <!-- page_pv begin-->
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div style="font-size:18px">
+      版权声明：本文为博主原创文章，转载请注明<a href='{{ site.address }}{{ page.url }}'>出处</a>。
+      <span id="busuanzi_container_page_pv" style="float: right; padding-right: 2px; display: inline;">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+    <!--page_pv end-->
+
     <hr>
-    {% include uy_comment.html %}
+    <!-- UY BEGIN -->
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2125067"></script>
+    <div id="uyan_frame"></div>
+    <!-- UY END -->
+
   </div>
   <!-- 目录 -->
   <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
