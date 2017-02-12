@@ -6,10 +6,11 @@ tags: Cyber security，Cultural
 keywords: 安全，文化
 description: 
 ---
-翻译<a href="http://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=11797729">原文链接</a>
 
 ![Cyber Security]({{site.CDN_PATH}}/public/image/20170212_cyber_security_1.jpg)
 >"一位专家说，企业工作环境中的网络空间安全文化需要改变。"
+
+翻译<a href="http://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=11797729">原文链接</a>
 
 ### 译文
 &nbsp;&nbsp;一位专家说，网络空间安全需要从信息技术部门转到人力资源。
@@ -79,10 +80,3 @@ description:
 -社会工程：在这种情况下，通过各种手段（如来自似乎可信来源的虚假电子邮件）来操作目标。
 
 -鱼叉式钓鱼：类似于网络钓鱼啊，但是专注于特定的目标。鱼叉式钓鱼指的是捕获“大鱼”，如一名首席财务官。
-
-
-
-
-
-
-
