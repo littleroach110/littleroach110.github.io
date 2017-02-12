@@ -8,9 +8,10 @@ description:
 ---
 翻译<a href="http://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=11797729">原文链接</a>
 
-![Cyber Security]({{site.CDN_PATH}}/public/image/20170212_cyber_security_1.jpg "一位专家说，企业工作环境中的网络空间安全文化需要改变。")
+![Cyber Security]({{site.CDN_PATH}}/public/image/20170212_cyber_security_1.jpg)
+>"一位专家说，企业工作环境中的网络空间安全文化需要改变。"
 
-### 全文
+### 译文
 &nbsp;&nbsp;一位专家说，网络空间安全需要从信息技术部门转到人力资源。
 
 &nbsp;&nbsp;通过邮件进行钓鱼和社会工程活动，持续成为最频繁的网络犯罪之一。IT技术人员仍然是公司最脆弱的部分，而不是IT技术设施。
