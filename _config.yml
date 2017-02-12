@@ -45,3 +45,6 @@ locals:
   about: 关于
   newest: 最新文章
   archive: 归档
+
+# CDN加速网站路径
+CDN_PATH:http://ol8zepzvp.bkt.clouddn.com
