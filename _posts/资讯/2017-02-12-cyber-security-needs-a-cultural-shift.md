@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 网络空间安全文化需要改变-安全资讯
+title: 网络空间安全文化需要改变
 category: 资讯
 tags: Cyber-Security Cultural
 keywords: 安全，文化
