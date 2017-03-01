@@ -35,6 +35,14 @@ c[i]表示第i件物品所占的空间/费用。
 
 ![01 Package]({{site.CDN_PATH}}/public/image/20170214_01_package.png)
 
+|name|weight|value|1|2|3|4|5|6|7|8|9|10|
+|-------|-------|-------|----|----|----|----|----|----|----|----|----|----|
+|a|2|6|0|6|6|9|9|12|12|15|15|15|
+|b|2|6|0|3|3|6|6|9|9|9|10|11|
+|c|6|5|0|0|0|6|6|6|6|6|10|11|
+|d|5|4|0|0|0|6|6|6|6|6|10|10|
+|e|4|6|0|0|0|6|6|6|6|6|6|6|
+
 首先，要明确该表是自底向上、由左到右生成的。为了叙述方便，用e2单元格表示e行2列的单元格，这个单元格的意义是用来表示只有物品e时，有一个承重为2的背包，那么这个背包的最大价值是0，因为e物品的重量是4，背包装不了。
 
 对于d2单元格，表示只有e,d时，承重为2的背包，所能装入的最大价值，仍然是0，因为物品e,d都不是这个背包能装的。同理，c2=0，b2=3，a2=6。
@@ -43,12 +51,12 @@ c[i]表示第i件物品所占的空间/费用。
 
 <div>根据01背包的状态转换方程，需要考察两个值：一个是<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]" title="f[i-1][j]" /> ，对于这个例子来说，就是b8的值9；另一个是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i]" title="f[i-1][v-c[i]]+w[i]" /> 。在这里，<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]" title="f[i-1][j]" /> 表示我有一个承重为8的背包，当只有b,c,d,e四件可选是，这个背包能装入的最大价值；<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 表示我有一个承重为6的背包（等于当前背包承重减去物品a的重量），当只有物品b,c,d,e四件可选时，这个背包能装入的最大价值。<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 就是指单元格b6，其值为9，w[i]指的是a物品的价值，即6。
 
-由于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i] = 9+6=15" title="f[i-1][v-c[i]]+w[i] = 9+6=15" /> 大于<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]=9" title="f[i-1][j]=9" /> ，所以物品a应该放入承重为8的背包。
+<div>由于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i] = 9+6=15" title="f[i-1][v-c[i]]+w[i] = 9+6=15" /> 大于<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]=9" title="f[i-1][j]=9" /> ，所以物品a应该放入承重为8的背包。
 
 ### 4. 基于二维数组的代码实现
 该部分的01背包问题的代码实现，主要依赖二维数组，分别使用Python和C++进行程序编写。
 
-> <div> python代码实现过程中，使用numpy库实现对二维数组的定义和赋值操作；另外，在Python和C++的代码实现中，考虑到<img src="http://latex.codecogs.com/gif.latex?optimal[i][j] = optimal[i-1][j]" title="optimal[i][j] = optimal[i-1][j]" /> 中的i-1操作，为避免出现数组下标为负值，在定义weight和value时，对weight[0]和value[0]赋值为0。
+<div> python代码实现过程中，使用numpy库实现对二维数组的定义和赋值操作；另外，在Python和C++的代码实现中，考虑到<img src="http://latex.codecogs.com/gif.latex?optimal[i][j] = optimal[i-1][j]" title="optimal[i][j] = optimal[i-1][j]" /> 中的i-1操作，为避免出现数组下标为负值，在定义weight和value时，对weight[0]和value[0]赋值为0。
 
 其中，Python代码实现如下
 
@@ -77,7 +85,9 @@ for i in range(1,NUM+1):
     print "\n"
 print "The optimal solution is ", optimal[5][10]
 ```
+
 其运行结果为：
+
 ```
 0 0 0 6 6 6 6 6 6 6 
 
