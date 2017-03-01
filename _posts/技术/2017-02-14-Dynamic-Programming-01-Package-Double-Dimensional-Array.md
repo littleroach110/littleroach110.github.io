@@ -149,4 +149,4 @@ the optimal solution is 15
 
 【3】动态规划之01背包问题（最易理解的讲解），http://blog.csdn.net/mu399/article/details/7722810
 
-【4】01背包算法 动态规划（c++实现）http://blog.csdn.net/catkint/article/details/51009680
+【4】01背包算法 动态规划（c++实现），http://blog.csdn.net/catkint/article/details/51009680
