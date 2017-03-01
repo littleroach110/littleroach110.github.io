@@ -3,8 +3,8 @@ layout: post
 title: 动态规划之01背包问题（二维数组）
 category: 技术
 tags: 动态规划
-keywords:动态规划，最优化，01背包
-description:介绍动态规划中的01背包问题的思考、解决及编程实现的过程
+keywords:
+description:
 ---
 
 ### 1. 01背包问题描述
