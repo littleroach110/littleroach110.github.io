@@ -1,147 +1,60 @@
 ---
 layout: post
-title: 动态规划之01背包问题（二维数组）
+title: 在Mac上通过Sublime、Skim编辑LaTeX
 category: 技术
-tags: 动态规划
-keywords:动态规划，最优化，01背包
-description:介绍动态规划中的01背包问题的思考、解决及编程实现的过程
+tags: LaTeX Mac
+keywords: 
+description: 
 ---
 
-### 1. 01背包问题描述
-01背包问题是动态规划算法最经典的例子，动态规划算法通常用来求解最优化问题（Optimization problem），这类问题可以有很多可行解，每个解都有一个值，我们希望寻找具有最优值（最大值或最小值）的解。
+Sublime Text是一款非常优秀的编辑器，速度快，界面简洁，插件众多。并且能跨平台使用，在Mac和Windows上都能完美使用。虽然是一款付费软件，但作者很厚道地给了无限期的试用期限。这一切正如其官网广告词说的那样：The text editor you'll fall in love with.
 
-01背包问题可以描述为：有$N$件物品和一个容量为$V$的背包。第$i$件物品的费用是$c[i]$，价值是$w[i]$，求解将哪些物品装入背包，可使价值综合最大。
+Skim是一款免费轻量的PDF阅读、标注工具，布局贴心友好，与OS X自带的Previewer相比，Skim能更好的注释PDF文件。
 
-01背包是基础背包问题，特点是：每种物品仅有一件，可以选择放或不放，不能将物品i装入背包多次，也不能只装入部分的物品$i$。
+LaTeX是一款权威的科技论文排版软件，不仅可以写论文，也可以处理日常的各种文档工作，甚至是做幻灯片。相比于Word，LaTeX最大的优势是对于复杂公式的编辑与排版非常漂亮。并且用简单的命令就可以生成脚注、索引、目录和参考文献等复杂的结构。这一切优点都使得世界上众多的“科学家”们不再需要身兼作者与排版工两职，从而将更多的精力集中于文章内容本身。
 
-### 2. 01背包问题的基本思路
-使用01背包问题的子问题来定义状态，其状态转移方程为：
+本文的目的是将上述三种软件综合部署在Mac上。完成之后，你将可以在Sublime Text里面进行LaTeX代码编辑，用Skim预览生成的PDF文件。更重要的是，让你觉得，写论文也可以是一件很优美的事。
 
-$f[i][v]=max(f[i-1][v],f[i-1][v-c[i]]+w[i])$
+###准备工作：
 
-其中：
+- Mac上至少4GB的空余空间
+- 高速的互联网连接
 
-$f[i][v]$表示前i件物品恰放入一个容量为$v$的背包可以获得的最大价值；
+###第一步：安装MacTeX
+- 进入[MacTeX官网](http://www.tug.org/mactex)下载`MacTeX.pkg`文件。文件大约2GB，需要一段时间才能完成下载，趁现在去喝杯咖啡吧。
+- 下载完成之后，双击`MacTeX.pkg`进行安装。
+- 安装完成之后，会看到许多与TeX有关的程序图标，暂时忽略它们。
 
-$w[i]$表示第$i$件物品的价值；
+###第二步：安装Sublime Text
+- 进入[Sublime Text官网](http://www.sublimetext.com)下载最新版本的Sublime Text。这里我下载的是Sublime Text 3.
+- 下载完成之后，将文件拖入应用程序文件夹安装。
 
-$c[i]$表示第$i$件物品所占的空间/费用。
+###第三步：在Sublime Text中安装Package Control
+我们需要在Sublime Text中下载插件以便能够很好地操作与LaTeX有关的文件。而插件是通过Package Control下载的。
 
-这个方程是背包问题的核心状态转移方程，“将前i件物品放入容量为v的背包中”这个问题，如果只考虑第$i$件物品的策略（放或者不放），就可以转化为一个只牵扯前$i-1$件物品的问题。如果不放第$i$件物品，那么问题就转化为“前i-1件物品放入容量为v的背包中”，价值为$f[i-1][v]$；如果放入第$i$件物品，那么问题就转化为"前$i-1$件物品放入剩下容量为$v-c[i]$的背包中"，此时能获得的最大价值就是$f[i-1][v-c[i]]$再加上通过放入第$i$件物品获得的价值$w[i]$。（或者这样理解，当开始计算第$i$个目标时，计算其最大化的价值，主要有两种可能性：[1] 不放入$i$之前，最大的价值是多少；[2] 背包的空间减去$i$的重量，在这个重量下，最大的价值，再加上$i$的价值。)
+- 进入[Package Control官网](http://sublime.wbond.net/installation)复制灰色区块的代码。
+- 打开Sublime Text。
+- 使用快捷键“`control+~`”（~就在Esc键的下方）打开控制面板Console。你会在Sublime Text的底部看到弹出一个白色窗口。
+- 将刚才复制的代码粘贴到控制面板。
+- 按下“`Enter`”回车键。然后退出并重启Sublime Text。
 
-### 3. 实际案例描述背包问题
-问题描述：有编号分别为a,b,c,d,e 的五件物品，它们的重量分别是2,2,6,5,4，它们的价值分别是6,2,5,4,6，现在给你一个承重为10的背包，如何让背包里装入的物品具有最大的价值总和。
+###第四步：安装LaTeX Tools
+- Sublime Text重启后，按下“`Command+Shift+P`”打开命令托盘Command pallet，这一步也可以通过Tools下拉菜单完成。
+- 在命令托盘里输入“`Install Package`”，按下`Enter`回车建。
+- 完成之后，输入“`LaTeX Tools`”，找到这一项并回车安装。
+- 退出并重启Sublime Text。
 
-先使用以下的表格，对01背包的动态规划算法及过程进行描述。
+###第五步：安装Skim
+- 进[Skim](http://skim-app.sourceforge.net)下载Skim并安装
+- 打开Skim，在菜单栏中`Skim > Preference(选项) > Sync(同步)`
+- 在预设菜单中选择`Sublime Text`
 
-|name|weight|value|1|2|3|4|5|6|7|8|9|10|
-|-------|-------|-------|----|----|----|----|----|----|----|----|----|----|
-|a|2|6|0|6|6|9|9|12|12|15|15|15|
-|b|2|6|0|3|3|6|6|9|9|9|10|11|
-|c|6|5|0|0|0|6|6|6|6|6|10|11|
-|d|5|4|0|0|0|6|6|6|6|6|10|10|
-|e|4|6|0|0|0|6|6|6|6|6|6|6|
+![skim](/public/img/skim.png)
 
-首先，要明确该表是自底向上、由左到右生成的。为了叙述方便，用e2单元格表示e行2列的单元格，这个单元格的意义是用来表示只有物品e时，有一个承重为2的背包，那么这个背包的最大价值是0，因为e物品的重量是4，背包装不了。
+- 关闭上面这个窗口。
 
-对于d2单元格，表示只有e,d时，承重为2的背包，所能装入的最大价值，仍然是0，因为物品e,d都不是这个背包能装的。同理，$c2=0，b2=3，a2=6$。
-
-对于承重为8的背包，$a8=15$是怎么得出的呢？
-
-根据01背包的状态转换方程，需要考察两个值：一个是$f[i-1][j]$，对于这个例子来说，就是b8的值9；另一个是$f[i-1][v-c[i]]+w[i]$。在这里，$f[i-1][j]$表示我有一个承重为8的背包，当只有b,c,d,e四件可选是，这个背包能装入的最大价值；$f[i-1][v-c[i]]$表示我有一个承重为6的背包（等于当前背包承重减去物品a的重量），当只有物品b,c,d,e四件可选时，这个背包能装入的最大价值。$f[i-1][v-c[i]]$就是指单元格b6，其值为9，$w[i]$指的是a物品的价值，即6。
-
-由于$f[i-1][v-c[i]]+w[i] = 9+6=15$大于$f[i-1][j]=9$，所以物品a应该放入承重为8的背包。
-
-### 4. 基于二维数组的代码实现
-该部分的01背包问题的代码实现，主要依赖二维数组，分别使用Python和C++进行程序编写。
-
-> python代码实现过程中，使用numpy库实现对二维数组的定义和赋值操作；另外，在Python和C++的代码实现中，考虑到$optimal[i][j] = optimal[i-1][j]$中的$i-1$操作，为避免出现数组下标为负值，在定义$weight$和$value$时，对$weight[0]$和$value[0]$赋值为0。
-2017-02-02-Using-LaTeX-with-Sublime-and-Skim-for-Mac.md
-其中，Python代码实现如下
-```
-# -*- coding:utf-8 -*-
-import numpy as np
-
-CAPACITY = 10
-NUM = 5
-
-# init array
-optimal = [[0] * 11] * 6
-optimal = np.array(optimal)
-
-weight = [0, 4, 5, 6, 2, 2]
-value = [0, 6, 4, 5, 3, 6]
-
-for i in range(1,NUM+1):
-    for j in range(1,CAPACITY+1):
-        if(j < weight[i]):
-            optimal[i][j] = optimal[i-1][j]
-            print optimal[i][j],
-        else:
-            optimal[i][j] = max(optimal[i-1][j], optimal[i-1][j-weight[i]] + value[i])
-            print optimal[i][j],
-    print "\n"
-print "The optimal solution is ", optimal[5][10]
-```
-其运行结果为：
-```
-0 0 0 6 6 6 6 6 6 6 
-
-0 0 0 6 6 6 6 6 10 10 
-
-0 0 0 6 6 6 6 6 10 11 
-
-0 3 3 6 6 9 9 9 10 11 
-
-0 6 6 9 9 12 12 15 15 15 
-
-The optimal solution is  15
-```
+###全部完成，✌️
+现在，我们已经做完了所有的步骤，可以打开Sublime Text，`Command+N`新建文件并在里面编写LaTeX代码了，完成编辑之后，`Command+S`保存文件，`Command+B`编译并运行，这时就可以在Skim里面看到PDF预览了。
 
 
-C++的代码实现如下：
-```
-#include <iostream>
-#include <algorithm>
 
-using namespace std;
-
-#define CAPACITY 10
-#define NUM 5
-
-int optimal[NUM+1][CAPACITY+1] = {0};
-int weight[NUM+1] = {0,4,5,6,2,2};
-int value[NUM+1] = {0,6,4,5,3,6};
-
-int main() {
-    for(int i = 1; i< NUM+1; i++){
-        for(int j = 1; j < CAPACITY+1; j++){
-            if(weight[i] >j){
-                optimal[i][j] = optimal[i-1][j];
-                cout<< optimal[i][j]<< ' ';
-            }
-            else{
-                optimal[i][j] = max(optimal[i-1][j],optimal[i-1][j-weight[i]] + value[i]);
-                cout<< optimal[i][j]<< ' ';
-            }
-        }
-        cout << endl;
-    }
-    cout << endl << "The optimal solution is " << optimal[NUM][CAPACITY] << endl;
-}
-```
-其运算结果为：
-```
-0 0 0 6 6 6 6 6 10 10 
-0 0 0 6 6 6 6 6 10 11 
-0 3 3 6 6 9 9 9 10 11 
-0 6 6 9 9 12 12 15 15 15 
-
-the optimal solution is 15
-```
-
-### 参考：
-【1】01背包问题，https://www.youtube.com/watch?v=m_CmyldCRI8
-【2】P01: 01背包问题，http://love-oriented.com/pack/P01.html
-【3】动态规划之01背包问题（最易理解的讲解），http://blog.csdn.net/mu399/article/details/7722810
-【4】01背包算法 动态规划（c++实现）http://blog.csdn.net/catkint/article/details/51009680
