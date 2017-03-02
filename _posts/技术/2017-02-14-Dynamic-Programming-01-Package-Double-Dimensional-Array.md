@@ -231,6 +231,107 @@ int main() {
 the optimal solution is 15
 ```
 
+
+### 5. 基于一维数组的代码实现
+
+<div>使用一维数组时，01背包问题的本质状态转移方程并没有改变。在使用一维数组f[0...v]，要达到的效果是：第i次循环结束后，f[v]中所表示的就是二维数组时的<img src="http://latex.codecogs.com/gif.latex?f[i][v]" title="f[i][v]" />，即前i个物体面对容量时的最大价值。在二维数组中，可知<img src="http://latex.codecogs.com/gif.latex?f[i][v]" title="f[i][v]" />由两个状态得来: <img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" />和<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i]" title="f[i-1][v-c[i]]+w[i]" />。使用一维数组时，当第i次循环之前时，f[v]实际就是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" />；而对于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" />，当每次循环中，以v=v...0的顺序推f[v]时，就能保证<img src="http://latex.codecogs.com/gif.latex?f[v-c[i]]" title="f[v-c[i]]" />的状态。其状态转移方程为：
+
+<img src="http://latex.codecogs.com/gif.latex?v= V...0; f[v] = max( f[v], f[v-c[i]]+w[i] )" title="v= V...0; f[v] = max( f[v], f[v-c[i]]+w[i] )" />
+
+此状态转移方程对应于二维数组的状态转移方程如下：
+
+<img src="http://latex.codecogs.com/gif.latex?f[i][v]=max(f[i-1][v],f[i-1][v-c[i]]+w[i])" title="f[i][v]=max(f[i-1][v],f[i-1][v-c[i]]+w[i])" />
+
+<div>如上所示，<img src="http://latex.codecogs.com/gif.latex?f[v-c[i]]" title="f[v-c[i]]" /> 相当于二维数组中的<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 。而如果将v的循环顺序由逆序改为顺序，就不是01背包问题，而是完全背包问题，即一个物品可能会重复装入到背包中。举个例子，假如由物品z的容量为2，价值wz很大，背包容量为5，如果v的循环顺序不是逆序，那么外层循环跑到物体z时，内循环在v=2时，物品z被放入背包，当v=4时，寻求最大价值，物品z放入背包，<img src="http://latex.codecogs.com/gif.latex?f[4] = max( f[4], f[2]+ wz)" title="f[4] = max( f[4], f[2]+ wz)" />，后者比前者大，但此时<img src="http://latex.codecogs.com/gif.latex?f[2]+ wz" title="f[2]+ wz" /> 中的f[2]已经装入了一次物体z，这样一来，该物品z被装入背包2次，不符合要求。当使用逆序循环 v = V...0 时，则先计算数组下标较大的f[v]，以此不会发生一个物品被装入2次的情况。
+
+### 6. 基于一维数组的代码实现
+
+同样，使用Python和C++对一维数组的01背包问题进行代码实现，其中，Python实现代码如下：
+
+```
+# -*- coding:utf-8 -*-
+import numpy as np
+
+CAPACITY = 10
+NUM = 5
+
+# init array
+optimal = [0] * 11
+optimal = np.array(optimal)
+
+weight = [0, 4, 5, 6, 2, 2]
+value = [0, 6, 4, 5, 3, 6]
+
+for i in range(1,NUM+1):
+    for j in range(weight[i],CAPACITY+1)[::-1]:
+        if(weight[i] > j):
+            optimal[j] = optimal[j-1]
+        else:
+            optimal[j] = max(optimal[j-1],optimal[j-weight[i]]+value[i])
+        print optimal[j],
+
+    print "\n"
+print "The optimal solution is ", optimal[10]
+```
+
+运行结果如下：
+
+```
+6 6 6 6 6 6 6 
+
+10 10 6 6 6 6 
+
+11 6 6 6 6 
+
+9 9 9 9 9 6 3 3 3 
+
+15 15 15 12 9 9 9 6 6 
+
+The optimal solution is  15
+```
+
+C++代码实现过程如下：
+
+```
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+#define CAPACITY 10
+#define NUM 5
+
+int optimal[CAPACITY+1] = {0};
+int weight[NUM+1] = {0,4,5,6,2,2};
+int value[NUM+1] = {0,6,4,5,3,6};
+
+int main() {
+    for(int i = 1; i< NUM+1; i++){
+        for(int j = CAPACITY; j>= weight[i]; j--){
+            if(weight[i] >j)
+                optimal[j] = optimal[j-1];
+            else
+                optimal[j] = max(optimal[j-1],optimal[j-weight[i]]+value[i]);
+            cout <<optimal[j]<<" ";
+        }
+                cout << endl;
+    }
+    cout << endl << "The optimal solution is " << optimal[CAPACITY] << endl;
+}
+```
+
+运行结果如下：
+
+```
+6 6 6 6 6 6 6 
+10 10 6 6 6 6 
+11 6 6 6 6 
+9 9 9 9 9 6 3 3 3 
+15 15 15 12 9 9 9 6 6 
+
+The optimal solution is 15
+```
+
 <hr>
 ### 参考：
 
@@ -241,3 +342,5 @@ the optimal solution is 15
 【3】动态规划之01背包问题（最易理解的讲解），http://blog.csdn.net/mu399/article/details/7722810
 
 【4】01背包算法 动态规划（c++实现），http://blog.csdn.net/catkint/article/details/51009680
+
+【5】0-1背包使用一维数组，http://blog.csdn.net/fobdddf/article/details/19479217
