@@ -3,8 +3,8 @@ layout: post
 title: 动态规划之01背包问题
 category: 技术
 tags: 动态规划
-keywords: 背包问题
-description:对01背包问题的思考过程及实现方法的认识和实践
+keywords:
+description:
 ---
 
 ### 1. 01背包问题描述
