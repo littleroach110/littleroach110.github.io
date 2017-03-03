@@ -18,9 +18,9 @@ description:
 
 <div>复杂度是<img src="http://latex.codecogs.com/gif.latex? O(V*\sumn[i] )" title=" O(V*\sumn[i]) " /> 。
 
-对于多重背包问题的基本解决思路是转化为01背包问题：把第i种物品换成n[i]件01背包中的物品，则得到物品数为<img src="http://latex.codecogs.com/gif.latex? \sumn[i] )" title=" \sumn[i] " /> 的01背包问题，复杂度仍然是<img src="http://latex.codecogs.com/gif.latex? O(V*\sumn[i] )" title=" O(V*\sumn[i]) " /> 。
+<div>对于多重背包问题的基本解决思路是转化为01背包问题：把第i种物品换成n[i]件01背包中的物品，则得到物品数为<img src="http://latex.codecogs.com/gif.latex? \sumn[i] )" title=" \sumn[i] " /> 的01背包问题，复杂度仍然是<img src="http://latex.codecogs.com/gif.latex? O(V*\sumn[i] )" title=" O(V*\sumn[i]) " /> 。
 
-01背包问题的求解过程，在上两篇文章（[01背包](http://littleroach110.net/2017/02/14/Dynamic-Programming-01-Knapsack.html)、[完全背包](http://littleroach110.net/2017/03/02/Complete-Knapsack.html)），已经作了介绍，在此就不赘述。
+<div>01背包问题的求解过程，在上两篇文章（[01背包](http://littleroach110.net/2017/02/14/Dynamic-Programming-01-Knapsack.html)、[完全背包](http://littleroach110.net/2017/03/02/Complete-Knapsack.html)），已经作了介绍，在此就不赘述。
 
 同样，01背包问题的优化方面，考虑基于二进制的思想，以降低转化为01背包问题的复杂度。
 
