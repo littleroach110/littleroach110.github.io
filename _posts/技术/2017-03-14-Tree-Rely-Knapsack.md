@@ -208,9 +208,15 @@ int main( )
 ```
 
 <hr>
+
 ### 参考
+
 【1】树形DP-分组背包，http://www.cnblogs.com/GXZC/archive/2013/01/08/2851761.html
+
 【2】树形依赖背包，http://www.cnblogs.com/GXZC/archive/2013/01/13/2858649.html
+
 【3】XTSC 97 选课----树形依赖背包，http://cncc.bingj.com/cache.aspx?q=%E6%A0%91%E5%BD%A2%E4%BE%9D%E8%B5%96%E8%83%8C%E5%8C%85&d=5042632497045505&mkt=zh-CN&setlang=zh-CN&w=WPP7VyHhTr31H9WN1wiaJE1HR7ZbGWAt
+
 【4】hdu-1561，http://acm.hdu.edu.cn/showproblem.php?pid=1561
+
 【5】hdu-1561 The more, The better（树形dp入门，有依赖的背包），http://www.2cto.com/kf/201405/299531.html
