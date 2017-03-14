@@ -220,3 +220,5 @@ int main( )
 【4】hdu-1561，http://acm.hdu.edu.cn/showproblem.php?pid=1561
 
 【5】hdu-1561 The more, The better（树形dp入门，有依赖的背包），http://www.2cto.com/kf/201405/299531.html
+
+【6】HDU 1561 The more，The Better，http://www.cnblogs.com/bo-tao/archive/2012/03/06/2382483.html
