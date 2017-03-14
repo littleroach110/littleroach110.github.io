@@ -155,6 +155,58 @@ int main()
 }
 ```
 
+C++示例代码二(没有做更多的封装，更容易理解整个过程)：
+
+```
+#include<iostream>
+#include<cstdio>
+#include<vector>
+using namespace std;
+vector<int>list[224];
+int dp[224][224];
+int value[224];
+void DFS( int n ,int M )//M代表攻击该节点时还剩多少次 
+{
+    int len = list[n].size();
+    dp[n][1] = value[n];// 攻击该节点能够得到的财富值
+    for( int i = 0 ; i < len ; i++ )//继续攻击该节点下的子节点 
+    {
+        if( M > 1 )
+        DFS( list[n][i] ,M -1 );
+        for( int j = M ; j >= 1 ; j-- )// 孩子节点攻击的次数
+        {
+            int v = j + 1;
+            for( int k = 1; k < v ; k++ )// 从孩子节点中找攻击J次的最优值 
+            {
+                if( dp[n][v] < dp[n][v-k] + dp[list[n][i]][k] )
+                    dp[n][v] = dp[n][v-k] + dp[list[n][i]][k];
+            }    
+        }    
+    }
+}
+int main( )
+{
+    int  n ,m ,start,end;
+    while( scanf( "%d%d",&n ,&m ),n||m )
+    {
+        memset( dp , 0 , sizeof( dp ) );
+        memset( value , 0 , sizeof( value ) );
+        for( int i = 0 ; i <= n ; i++ )
+        {
+             list[i].clear( );
+        }
+        for( int i = 1 ; i <= n ; i++ )
+        {
+            scanf( "%d%d",&start , &value[i] );
+            list[start].push_back( i );
+        }
+       DFS( 0 , m+1 );
+       printf( "%d\n",dp[0][m+1] );
+    }
+    return 0;    
+}
+```
+
 <hr>
 ### 参考
 【1】树形DP-分组背包，http://www.cnblogs.com/GXZC/archive/2013/01/08/2851761.html
