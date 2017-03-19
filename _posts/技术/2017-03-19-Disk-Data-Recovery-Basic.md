@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 硬盘数据恢复的流程和方法（基本篇:）
+title: 硬盘数据恢复的流程和方法（基本篇）
 category: 技术
 tags: 数据恢复
 keywords:
