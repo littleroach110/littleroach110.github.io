@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 硬盘数据恢复的流程和方法
+title: 硬盘数据恢复的流程和方法（基本篇:）
 category: 技术
 tags: 数据恢复
 keywords:
@@ -15,7 +15,7 @@ description:
 
 ### 2. 恢复使用的软件
 
-* WinHex， 百度网盘下载地址：https://pan.baidu.com/s/1bWMxPW
+* WinHex， 百度网盘下载地址：https://pan.baidu.com/s/1bWMxPW：
 
 * DiskGenius， 百度网盘下载地址：https://pan.baidu.com/s/1dEXwl4t
 
