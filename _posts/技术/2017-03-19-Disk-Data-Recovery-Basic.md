@@ -15,7 +15,7 @@ description:
 
 ### 2. 恢复使用的软件
 
-* WinHex， 百度网盘下载地址：https://pan.baidu.com/s/1bWMxPW：
+* WinHex， 百度网盘下载地址：https://pan.baidu.com/s/1bWMxPW
 
 * DiskGenius， 百度网盘下载地址：https://pan.baidu.com/s/1dEXwl4t
 
