@@ -55,7 +55,7 @@ description:
 
 ![Data Forensic 08]({{site.CDN_PATH}}/public/image/20170319-Recovery-The-File-08.png)
  
- ##### 3.2 使用DiskGenius对硬盘/磁盘进行制作镜像文件的操作
+##### 3.2 使用DiskGenius对硬盘/磁盘进行制作镜像文件的操作
 
 （1）打开DiskGenius，可以看到主机中基本的硬盘加载情况。
 
