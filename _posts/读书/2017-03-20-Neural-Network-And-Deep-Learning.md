@@ -11,46 +11,41 @@ description:
 
 ### 1. 神经网络
 
-大脑的学过程包括三个基本步骤或系统：（1）信息输入和权值；（2）模式加工；（3）动作输出。
+*大脑的学过程包括三个基本步骤或系统：（1）信息输入和权值；（2）模式加工；（3）动作输出。
 
 <hr>
 
 ![Neural Network 01]({{site.CDN_PATH}}/public/image/20170320-Neural-Network01.png)
 
-人工神经网络的输入包括接收信号的“树突”、信号处理和传递函数。
+*人工神经网络的输入包括接收信号的“树突”、信号处理和传递函数。
 
 <hr>
 
-常用的传递函数
+常用的传递函数，如下：
 
-|函数名称|映射关系|缩写|说明|
-|:---------:|:---------:|:---------:|:---------:|
-|阶梯函数|<img src="http://latex.codecogs.com/gif.latex?{\begin{array}{ll} a=0,n\leq0  \\ a=1,n>0 \end{array}}" title="{\begin{array}{ll} a=0,n\leq0  \\ a=1,n>0 \end{array}}" /> |Step|n大于等于0时，输出1，否则输出0|
-|符号函数|<img src="http://latex.codecogs.com/gif.latex?{\begin{array}{ll} a=-1,n<0  \\ a=1,n\geq0 \end{array}}" title="{\begin{array}{ll} a=-1,n<0  \\ a=1,n\geq0 \end{array}}" /> |Sgn|n大于等于0时，输出1，否则输出-1|
-|线性函数|<img src="http://latex.codecogs.com/gif.latex?a=n" title="a=n" /> |NULL|Linear|n本身就是神经元输出|
-|饱和线性函数|<img src="http://latex.codecogs.com/gif.latex?{\begin{array}{ll} a=0,n<0  \\ a=n,0\leq n \leq1 \\ a=1,n>1 \end{array}}" title="{\begin{array}{ll} a=0,n<0  \\ a=n,0\leq n \leq1 \\ a=1,n>1 \end{array}}" /> |Ramp|n小于0时，输出0，n在0到1区间时，输出n，n大于1时，输出1|
-|对书S形函数|<img src="http://latex.codecogs.com/gif.latex?a=a/(1+exp(-n))" title="a=a/(1+exp(-n))" /> |Sigmoid|有界函数，无论n如何，输出永远在(0,1)的开区间|
-|双曲正切S形函数|<img src="http://latex.codecogs.com/gif.latex?a=\frac{exp(n-exp(-n))}{exp(n)+exp(-n)}" title="a=\frac{exp(n-exp(-n))}{exp(n)+exp(-n)}" /> |Tanh|有界函数，无论n如何，输出永远在(-1,1)的开区间|
+![Neural Network 01]({{site.CDN_PATH}}/public/image/20170320-Neural-Network02.png)
+
+![Neural Network 01]({{site.CDN_PATH}}/public/image/20170320-Neural-Network03.png)
 
 <hr>
 
-Neuroph：一个基于Java的神经网络框架；
+*Neuroph：一个基于Java的神经网络框架；
 
 <hr>
 
-线性不可分的问题，可以通过构造多层神经网络的方法予以解决；
+*线性不可分的问题，可以通过构造多层神经网络的方法予以解决；
 
 ### 2. 深度学习 
 
-深度神经网络通常是前馈型神经网络，深度神经网络是一种结构，而不是一种算法；
+*深度神经网络通常是前馈型神经网络，深度神经网络是一种结构，而不是一种算法；
 
 <hr>
 
-深度学习是神经网络的一个大分支，深度学习的基本结构是深度神经网络；
+*深度学习是神经网络的一个大分支，深度学习的基本结构是深度神经网络；
 
 <hr>
 
-深度结构（设计多个非线性处理单元层）非凸目标函数中普遍存在的局部最小是训练困难的主要来源；
+*深度结构（设计多个非线性处理单元层）非凸目标函数中普遍存在的局部最小是训练困难的主要来源；
 
 <hr>
 
