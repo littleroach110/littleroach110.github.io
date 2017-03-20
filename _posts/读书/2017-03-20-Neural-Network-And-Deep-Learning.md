@@ -23,9 +23,9 @@ description:
 
 * 常用的传递函数，如下：
 
-![Neural Network 01]({{site.CDN_PATH}}/public/image/20170320-Neural-Network02.png)
+![Neural Network 02]({{site.CDN_PATH}}/public/image/20170320-Neural-Network02.png)
 
-![Neural Network 01]({{site.CDN_PATH}}/public/image/20170320-Neural-Network03.png)
+![Neural Network 03]({{site.CDN_PATH}}/public/image/20170320-Neural-Network03.png)
 
 <hr>
 
