@@ -21,7 +21,7 @@ description:
 
 <hr>
 
-常用的传递函数，如下：
+* 常用的传递函数，如下：
 
 ![Neural Network 01]({{site.CDN_PATH}}/public/image/20170320-Neural-Network02.png)
 
