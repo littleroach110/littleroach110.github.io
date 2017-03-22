@@ -2,7 +2,7 @@
 layout: post
 title: 《神经网络与深度学习》读书笔记
 category: 读书
-tags: 深度学习 神经网络
+tags: 深度学习 神经网络 机器学习
 keywords:
 description:
 ---
