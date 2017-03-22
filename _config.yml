@@ -36,8 +36,8 @@ active: 资讯
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Optimization
-  - LaTeX
+  - 动态规划
+  - 数据恢复
 
 # 中文本地化
 locals:
