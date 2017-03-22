@@ -23,7 +23,7 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 ##### 2.1 网络初始化
 
-假设输入层的节点个数为n，隐含层的节点个数为l，输出层的节点个数为m。输入层到隐含层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{ij}" title="w_{ij}" />，隐含层到输出层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{jk}" title="w_{jk}" />，输入层到隐含层的偏置为<img src="http://latex.codecogs.com/gif.latex?a_j" title="a_j" />，隐含层到输出层的偏置为<img src="http://latex.codecogs.com/gif.latex?b_k" title="b_k" />。学习速率为<img src="http://latex.codecogs.com/gif.latex?\eta" title="\eta" />，激励函数为g(x)。其中激励函数g(x)取Sigmoid函数。形式为：
+<di>假设输入层的节点个数为n，隐含层的节点个数为l，输出层的节点个数为m。输入层到隐含层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{ij}" title="w_{ij}" />，隐含层到输出层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{jk}" title="w_{jk}" />，输入层到隐含层的偏置为<img src="http://latex.codecogs.com/gif.latex?a_j" title="a_j" />，隐含层到输出层的偏置为<img src="http://latex.codecogs.com/gif.latex?b_k" title="b_k" />。学习速率为<img src="http://latex.codecogs.com/gif.latex?\eta" title="\eta" />，激励函数为g(x)。其中激励函数g(x)取Sigmoid函数。形式为：
 
 <img src="http://latex.codecogs.com/gif.latex?g(x) = \frac{1}{1+e^{-x}}" title="g(x) = \frac{1}{1+e^{-x}}" />
 
