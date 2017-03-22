@@ -23,13 +23,13 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 ##### 2.1 网络初始化
 
-<di>假设输入层的节点个数为n，隐含层的节点个数为l，输出层的节点个数为m。输入层到隐含层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{ij}" title="w_{ij}" />，隐含层到输出层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{jk}" title="w_{jk}" />，输入层到隐含层的偏置为<img src="http://latex.codecogs.com/gif.latex?a_j" title="a_j" />，隐含层到输出层的偏置为<img src="http://latex.codecogs.com/gif.latex?b_k" title="b_k" />。学习速率为<img src="http://latex.codecogs.com/gif.latex?\eta" title="\eta" />，激励函数为g(x)。其中激励函数g(x)取Sigmoid函数。形式为：
+<div>假设输入层的节点个数为n，隐含层的节点个数为l，输出层的节点个数为m。输入层到隐含层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{ij}" title="w_{ij}" />，隐含层到输出层的权重为<img src="http://latex.codecogs.com/gif.latex?w_{jk}" title="w_{jk}" />，输入层到隐含层的偏置为<img src="http://latex.codecogs.com/gif.latex?a_j" title="a_j" />，隐含层到输出层的偏置为<img src="http://latex.codecogs.com/gif.latex?b_k" title="b_k" />。学习速率为<img src="http://latex.codecogs.com/gif.latex?\eta" title="\eta" />，激励函数为g(x)。其中激励函数g(x)取Sigmoid函数。形式为：
 
 <img src="http://latex.codecogs.com/gif.latex?g(x) = \frac{1}{1+e^{-x}}" title="g(x) = \frac{1}{1+e^{-x}}" />
 
 ##### 2.2 隐含层的输出
 
-如上面的三层BP网络所示，隐含层的输出<img src="http://latex.codecogs.com/gif.latex?H_j" title="H_j" />为：
+<div>如上面的三层BP网络所示，隐含层的输出<img src="http://latex.codecogs.com/gif.latex?H_j" title="H_j" />为：
 
 <img src="http://latex.codecogs.com/gif.latex?H_j = g(\sum^n_{i=1} w_{ij} x_i + a_j)" title="H_j = g(\sum^n_{i=1} w_{ij} x_i + a_j)" />
 
@@ -43,11 +43,11 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 <img src="http://latex.codecogs.com/gif.latex?E = \frac{1}{2} \sum^m_{k=1}(Y_k-O_k)^2" title="E = \frac{1}{2} \sum^m_{k=1}(Y_k-O_k)^2" />
 
-其中<img src="http://latex.codecogs.com/gif.latex?Y_k" title="Y_k" />为期望输出。我们记<img src="http://latex.codecogs.com/gif.latex?Y_k-O_k = e_k" title="Y_k-O_k = e_k" />，则E可以表示为：
+<div>其中<img src="http://latex.codecogs.com/gif.latex?Y_k" title="Y_k" />为期望输出。我们记<img src="http://latex.codecogs.com/gif.latex?Y_k-O_k = e_k" title="Y_k-O_k = e_k" />，则E可以表示为：
 
 <img src="http://latex.codecogs.com/gif.latex?E = \frac{1}{2} \sum^m_{k=1}e^2_k" title="E = \frac{1}{2} \sum^m_{k=1}e^2_k" />
 
-以上公式中，<img src="http://latex.codecogs.com/gif.latex?i=1...n, j=1...l, k=1...m" title="i=1...n, j=1...l, k=1...m" />。
+<div>以上公式中，<img src="http://latex.codecogs.com/gif.latex?i=1...n, j=1...l, k=1...m" title="i=1...n, j=1...l, k=1...m" />。
 
 ##### 2.5 权值的更新
 
