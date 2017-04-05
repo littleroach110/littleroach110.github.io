@@ -145,3 +145,7 @@ description:
 如果不是。
 
 灰烬与尘埃又为什么要互相憎恨呢？
+
+### 原文链接
+
+<a href="http://www.t66y.com/htm_data/7/1703/2298630.html"> 文章原文，点击查看 </a>
