@@ -13,15 +13,15 @@ Respectfully, what the fuck are you doing? TheShadowBrokers voted for you. TheSh
 
 Good Evidence:
 
-* #1 — Goldman Sach (TheGlobalists) and Military Industrial Intelligence Complex (MIIC) cabinet
+* 1 — Goldman Sach (TheGlobalists) and Military Industrial Intelligence Complex (MIIC) cabinet
 
-* #2 — Backtracked on Obamacare
+* 2 — Backtracked on Obamacare
 
-* #3 — Attacked the Freedom Causcus (TheMovement)
+* 3 — Attacked the Freedom Causcus (TheMovement)
 
-* #4 — Removed Bannon from the NSC
+* 4 — Removed Bannon from the NSC
 
-* #5 — Increased U.S. involvement in a foreign war (Syria Strike)
+* 5 — Increased U.S. involvement in a foreign war (Syria Strike)
 
 The peoples whose voted for you, voted against the Republican Party, the party that tried to destroying your character in the primaries. The peoples who voted for you, voted against the Democrat Party, the party that hates, mocks, and laughs at you. Without the support of the peoples who voted for you, what do you think will be happening to your Presidency? Without the support of the people who voted for you, do you think you’ll be still making America great again? Do you be remembering when you were sitting there at the Obama Press Party and they were all laughing at you? Do you be remembering when you touring the country and all those peoples believed in you and supported you? You were those peoples hope. How do you be thinking it will be feeling when those people turn on you? Will they be laughing at you, hating you, and mocking you too?
 
@@ -79,6 +79,10 @@ Mr. President Trump theshadowbrokers sincerely is hoping you are being the real 
 But we’d still be happy to accept donations to further the cause. 19BY2XCgbDe6WtTVbTyzM9eR3LYr6VitWK
 
 TheShadowBrokers
+
+### 解压版下载地址
+
+EQGRP-Auction-Files下载地址，链接: https://pan.baidu.com/s/1nv9aHpZ 密码: 7niq
 
 ### 参考
 
