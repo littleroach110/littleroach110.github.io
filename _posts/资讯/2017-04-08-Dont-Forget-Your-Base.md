@@ -13,15 +13,15 @@ Respectfully, what the fuck are you doing? TheShadowBrokers voted for you. TheSh
 
 Good Evidence:
 
-#1 — Goldman Sach (TheGlobalists) and Military Industrial Intelligence Complex (MIIC) cabinet
+* #1 — Goldman Sach (TheGlobalists) and Military Industrial Intelligence Complex (MIIC) cabinet
 
-#2 — Backtracked on Obamacare
+* #2 — Backtracked on Obamacare
 
-#3 — Attacked the Freedom Causcus (TheMovement)
+* #3 — Attacked the Freedom Causcus (TheMovement)
 
-#4 — Removed Bannon from the NSC
+* #4 — Removed Bannon from the NSC
 
-#5 — Increased U.S. involvement in a foreign war (Syria Strike)
+* #5 — Increased U.S. involvement in a foreign war (Syria Strike)
 
 The peoples whose voted for you, voted against the Republican Party, the party that tried to destroying your character in the primaries. The peoples who voted for you, voted against the Democrat Party, the party that hates, mocks, and laughs at you. Without the support of the peoples who voted for you, what do you think will be happening to your Presidency? Without the support of the people who voted for you, do you think you’ll be still making America great again? Do you be remembering when you were sitting there at the Obama Press Party and they were all laughing at you? Do you be remembering when you touring the country and all those peoples believed in you and supported you? You were those peoples hope. How do you be thinking it will be feeling when those people turn on you? Will they be laughing at you, hating you, and mocking you too?
 
@@ -31,19 +31,19 @@ Mr Trump, we getting it. You having special empathy for father whose daughter is
 Mr President theshadowbrokers would like to be making some suggestion regarding why you were being elected, is just being friendly reminders.
 Your Supporters:
 
-- Don’t care what is written in the NYT, Washington Post, or any newspaper, so just ignore it.
+* - Don’t care what is written in the NYT, Washington Post, or any newspaper, so just ignore it.
 
-- Don’t care if you swapped wives with Mr Putin, double down on it, “Putin is not just my firend he is my BFF”.
+* - Don’t care if you swapped wives with Mr Putin, double down on it, “Putin is not just my firend he is my BFF”.
 
-- Don’t care if the election was hacked or rigged, celebrate it “so what if I did, what are you going to do about it”.
+* - Don’t care if the election was hacked or rigged, celebrate it “so what if I did, what are you going to do about it”.
 
-- Don’t care if your popular or nice, get er done, Obama’s fail, thinking he could create compromise. No compromise.
+* - Don’t care if your popular or nice, get er done, Obama’s fail, thinking he could create compromise. No compromise.
 
-- Don’t want foreign wars, Do want domestic wars, “drain the swamp”, “destroy the nanny state”
+* - Don’t want foreign wars, Do want domestic wars, “drain the swamp”, “destroy the nanny state”
 
-- Don’t care about your faith, you sound like a smuck when you try to say god things
+* - Don’t care about your faith, you sound like a smuck when you try to say god things
 
-- DO support the ideologies and policies of Steve Bannon, Anti-Globalism, Anti-Socialism, Nationalism, Isolationism
+* - DO support the ideologies and policies of Steve Bannon, Anti-Globalism, Anti-Socialism, Nationalism, Isolationism
 
 TheShadowBrokers is having some other suggestions.
 
