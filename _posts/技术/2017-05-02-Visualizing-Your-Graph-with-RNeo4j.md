@@ -141,7 +141,7 @@ igraph是一个图算法库，可以非常容易通过创建一个igraph图对�
 
 生成关联图，如图所示：
 
-![Visualizing Your Graph with RNeo4j 02]({{site.CDN_PATH}}/public/image/20170502-Visualizing-Your-Graph-with-RNeo4j02.png)
+![Visualizing Your Graph with RNeo4j 03]({{site.CDN_PATH}}/public/image/20170502-Visualizing-Your-Graph-with-RNeo4j03.png)
 
 使用以上工作流程，可以直接从Neo4j中查询一个子图，并可视化图的聚类算法。
 
