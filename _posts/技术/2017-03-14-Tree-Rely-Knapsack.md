@@ -246,7 +246,9 @@ int main( )
 ```
 
 <hr>
+
 ### 参考
+
 【1】树形DP-分组背包，http://www.cnblogs.com/GXZC/archive/2013/01/08/2851761.html
 
 【2】树形依赖背包，http://www.cnblogs.com/GXZC/archive/2013/01/13/2858649.html
