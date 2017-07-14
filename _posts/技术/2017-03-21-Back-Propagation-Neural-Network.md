@@ -61,17 +61,23 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 <img src="http://latex.codecogs.com/gif.latex?g(x) = \frac{1}{1+e^{-x}}" title="g(x) = \frac{1}{1+e^{-x}}" />
 
+
 ##### 3.2 隐含层的输出
+
 
 <div>如上面的三层BP网络所示，隐含层的输出<img src="http://latex.codecogs.com/gif.latex?H_j" title="H_j" />为：
 
 <img src="http://latex.codecogs.com/gif.latex?H_j = g(\sum^n_{i=1} w_{ij} x_i + a_j)" title="H_j = g(\sum^n_{i=1} w_{ij} x_i + a_j)" />
 
+
 ##### 3.3 输出层的输出
+
 
 <img src="http://latex.codecogs.com/gif.latex?O_k = \sum^l_{j=1} H_jw_{jk} + b_k" title="O_k = \sum^l_{j=1} H_jw_{jk} + b_k" />
 
+
 ##### 3.4 误差的计算
+
 
 我们取误差公式为：
 
@@ -83,7 +89,9 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 <div>以上公式中，<img src="http://latex.codecogs.com/gif.latex?i=1...n, j=1...l, k=1...m" title="i=1...n, j=1...l, k=1...m" />。
 
+
 ##### 3.5 权值的更新
+
 
 权值的更新公式为：
 
@@ -115,7 +123,9 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 <img src="http://latex.codecogs.com/gif.latex?\omega&space;_{ij}=\omega&space;_{ij}+\eta&space;H_j\left&space;(&space;1-H_j&space;\right&space;)x_i\sum_{k=1}^{m}\omega&space;_{jk}e_k" title="">
 
+
 ##### 3.6 偏置的更新
+
 
 偏置的更新公式为：
 
@@ -143,11 +153,15 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 <img src="http://latex.codecogs.com/gif.latex?a_k=a_k+\eta&space;H_j\left&space;(&space;1-H_j&space;\right&space;)\sum_{k=1}^{m}\omega&space;_{jk}e_k" title="">
 
+
 ##### 3.7 判断算法迭代是否结束
+
 
 有很多的方法可以判断算法是否已经收敛，常用的有指定迭代的代数，判断相邻的两次误差之间的差别是否小于指定的值等。
 
+
 ##### 3.8 流程总结
+
 
 可以看出，BP神经网络学习算法中，<b>各层权值调整公式都是一样的</b>，均由3个因素决定，即：
 
