@@ -40,5 +40,7 @@ for i = 1...N
 ```
 
 <hr>
+
 ### 参考
+
 【1】二维费用的背包问题，http://love-oriented.com/pack/P05.html

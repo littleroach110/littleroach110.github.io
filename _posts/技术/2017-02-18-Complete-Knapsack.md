@@ -133,5 +133,7 @@ The optimal solution is  30
 <hr>
 
 ### 参考
+
 【1】P02: 完全背包问题，http://love-oriented.com/pack/P02.html
+
 【2】背包问题——“完全背包”详解及实现（包含背包具体物品的求解），http://blog.csdn.net/wumuzi520/article/details/7014830

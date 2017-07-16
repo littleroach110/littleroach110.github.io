@@ -12,6 +12,7 @@ description:
 有N种物品和一个容量为V的背包。第i种物品最多有n[i]件可用，每件费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使这些物品的费用总和不超过背包容量，且价值总和最大。
 
 ### 2. 多重背包问题解决思路
+
 多重背包问题与完全背包问题相似，只是对于第i种物品有n[i]+1种策略，即取0件、取1件... 取n[i]件。其状态转移方程为：
 
 <img src="http://latex.codecogs.com/gif.latex?f[i][v] = mac( f[i-1][v-k*c[i]] + k*w[i] | 0 \leq k \leq n[i] )" title="f[i][v] = mac( f[i-1][v-k*c[i]] + k*w[i] | 0 \leq k \leq n[i] )" /> 
@@ -25,5 +26,7 @@ description:
 同样，01背包问题的优化方面，考虑基于二进制的思想，以降低转化为01背包问题的复杂度。
 
 <hr>
+
 ### 参考
+
 【1】P03: 多重背包问题，http://love-oriented.com/pack/P03.html
