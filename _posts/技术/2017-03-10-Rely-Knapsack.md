@@ -19,9 +19,9 @@ description:
 
 所以，一个“主件”和它的附件集合，实际上是一个物品组，每一个选择某个“主件”或者“主件+附件”的策略，实际上相当于这个物品组中的一个物品，其费用和价值，都是策略中的物品的值的总和。这样的话，对于该简化描述的依赖背包问题的，可以转化为分组背包问题，参考分组背包问题的解决思路，可以解决该问题。
 
-<div>考虑到一个“主件”和它的附件集合，存在多种组合策略，需要考虑对每组内的物品进行组合优化。对于第k个物品组中的物品，所有费用相同的物品，只留一个价值最大的，不影响结果。因此，可以对主件k的“附件”集合进行一次01背包，得到的费用依次为<img src="http://latex.codecogs.com/gif.latex?0...V-C_k})" title="0...V-C_k" /> ，所有这些值对应的最大价值<img src="http://latex.codecogs.com/gif.latex?F_k[0...V-C_k]})" title="F_k[0...V-C_k" />，那么该主件及其附件集合相当于<img src="http://latex.codecogs.com/gif.latex?V-C_k+1]})" title="V-C_k+1" />个物品的物品组，其中费用为v的物品的价值为<img src="http://latex.codecogs.com/gif.latex?F_k[v-C_k]+W_k]})" title="F_k[v-C_k]+W_k" />，v的取值范围是<img src="http://latex.codecogs.com/gif.latex?C_k\leq v \leq V]})" title="C_k\leq v \leq V" />。
+<div>考虑到一个“主件”和它的附件集合，存在多种组合策略，需要考虑对每组内的物品进行组合优化。对于第k个物品组中的物品，所有费用相同的物品，只留一个价值最大的，不影响结果。因此，可以对主件k的“附件”集合进行一次01背包，得到的费用依次为<img src="http://latex.codecogs.com/gif.latex?0...V-C_k})" title="0...V-C_k" /> ，所有这些值对应的最大价值<img src="http://latex.codecogs.com/gif.latex?F_k[0...V-C_k]})" title="F_k[0...V-C_k" />，那么该主件及其附件集合相当于<img src="http://latex.codecogs.com/gif.latex?V-C_k+1]})" title="V-C_k+1" />个物品的物品组，其中费用为v的物品的价值为<img src="http://latex.codecogs.com/gif.latex?F_k[v-C_k]+W_k]})" title="F_k[v-C_k]+W_k" />，v的取值范围是<img src="http://latex.codecogs.com/gif.latex?C_k\leq v \leq V]})" title="C_k\leq v \leq V" />。</div>
 
-<div>通过对一个“主件”和它的附件集合使用一次01背包方法，可以将指数级的策略，转化为<img src="http://latex.codecogs.com/gif.latex?V-C_k+1]})" title="V-C_k+1" />个物品的物品组，之后可以将其用于分组的背包问题，予以解决。
+<div>通过对一个“主件”和它的附件集合使用一次01背包方法，可以将指数级的策略，转化为<img src="http://latex.codecogs.com/gif.latex?V-C_k+1]})" title="V-C_k+1" />个物品的物品组，之后可以将其用于分组的背包问题，予以解决。</div>
 
 ### 3. 较一般的问题
 

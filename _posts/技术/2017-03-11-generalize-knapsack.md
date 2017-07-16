@@ -15,7 +15,7 @@ description:
 
 另一种理解是，一个泛化物品就是一个数组h[0...V]，给它费用v，可得到价值h(v)。
 
-<div>考虑背包问题的不同情况，一个费用为c，价值为w的物品，如果它是01背包问题中的物品，那么把它看作泛化物品，它就是除了<img src="http://latex.codecogs.com/gif.latex?h(c) = w})" title="h(c) = w" /> 以外，其他函数值都为0的一个函数；如果它是完全背包中的一个物品，那么把它看成这样的函数：仅当v被c整除时，有<img src="http://latex.codecogs.com/gif.latex?h(v) = w* (v /c)})" title="h(v) = w* v /c" /> ，其它函数值均为0；如果它是多重背包中的重复次数最多为m的物品，那么它对应的泛化函数有<img src="http://latex.codecogs.com/gif.latex?h(v) = w* v / c" title="h(v) = w* v /c" />  ，仅当v被c整除，且<img src="http://latex.codecogs.com/gif.latex?v / c \leq n" title="v / c \leq n" /> ，其它情况函数值均为0。
+<div>考虑背包问题的不同情况，一个费用为c，价值为w的物品，如果它是01背包问题中的物品，那么把它看作泛化物品，它就是除了<img src="http://latex.codecogs.com/gif.latex?h(c) = w})" title="h(c) = w" /> 以外，其他函数值都为0的一个函数；如果它是完全背包中的一个物品，那么把它看成这样的函数：仅当v被c整除时，有<img src="http://latex.codecogs.com/gif.latex?h(v) = w* (v /c)})" title="h(v) = w* v /c" /> ，其它函数值均为0；如果它是多重背包中的重复次数最多为m的物品，那么它对应的泛化函数有<img src="http://latex.codecogs.com/gif.latex?h(v) = w* v / c" title="h(v) = w* v /c" />  ，仅当v被c整除，且<img src="http://latex.codecogs.com/gif.latex?v / c \leq n" title="v / c \leq n" /> ，其它情况函数值均为0。</div>
 
 一个物品组可以看作一个泛化物品h，对于一个0...V中的v，若物品组中不存在费用为v的物品，则h(v) = 0，否则h(v)取所有费用为v的物品中的最大价值。在讨论的有依赖的背包问题中，每个“主件”及其“附件”的集合等价于一个物品组，可以看作成一个泛化物品。
 
@@ -31,9 +31,9 @@ description:
 
 将f定义为泛化物品h和l的和：h和l都是泛化物品，若函数f满足以上关系式，则称f是h和l的和。
 
-<div>泛化物品和运算的时间复杂度取决于背包的容量， 是<img src="http://latex.codecogs.com/gif.latex?O(V^2)" title="O(V^2)" /> 。
+<div>泛化物品和运算的时间复杂度取决于背包的容量， 是<img src="http://latex.codecogs.com/gif.latex?O(V^2)" title="O(V^2)" /> 。</div>
 
-<div>由泛化物品的定义可知：在一个背包问题中，若将两个泛化物品代替它们的和，不影响问题的答案。事实上，对于其中的物品都是泛化物品的背包问题，求它的答案的过程也就是求所有这些泛化物品之和的过程。若问题的和为s，则答案就是<img src="http://latex.codecogs.com/gif.latex?s(0...V )" title="s(0...V )" /> 中的最大值。
+<div>由泛化物品的定义可知：在一个背包问题中，若将两个泛化物品代替它们的和，不影响问题的答案。事实上，对于其中的物品都是泛化物品的背包问题，求它的答案的过程也就是求所有这些泛化物品之和的过程。若问题的和为s，则答案就是<img src="http://latex.codecogs.com/gif.latex?s(0...V )" title="s(0...V )" /> 中的最大值。</div>
 
 ### 3. 背包问题中的泛化物品
 

@@ -83,11 +83,11 @@ BP神经网络需要依据信号的前向传播和误差的后向传播来构建
 
 <img src="http://latex.codecogs.com/gif.latex?E = \frac{1}{2} \sum^m_{k=1}(Y_k-O_k)^2" title="E = \frac{1}{2} \sum^m_{k=1}(Y_k-O_k)^2" />
 
-<div>其中<img src="http://latex.codecogs.com/gif.latex?Y_k" title="Y_k" />为期望输出。我们记<img src="http://latex.codecogs.com/gif.latex?Y_k-O_k = e_k" title="Y_k-O_k = e_k" />，则E可以表示为：
+<div>其中<img src="http://latex.codecogs.com/gif.latex?Y_k" title="Y_k" />为期望输出。我们记<img src="http://latex.codecogs.com/gif.latex?Y_k-O_k = e_k" title="Y_k-O_k = e_k" />，则E可以表示为：</div>
 
 <img src="http://latex.codecogs.com/gif.latex?E = \frac{1}{2} \sum^m_{k=1}e^2_k" title="E = \frac{1}{2} \sum^m_{k=1}e^2_k" />
 
-<div>以上公式中，<img src="http://latex.codecogs.com/gif.latex?i=1...n, j=1...l, k=1...m" title="i=1...n, j=1...l, k=1...m" />。
+<div>以上公式中，<img src="http://latex.codecogs.com/gif.latex?i=1...n, j=1...l, k=1...m" title="i=1...n, j=1...l, k=1...m" />。</div>
 
 
 ##### 3.5 权值的更新

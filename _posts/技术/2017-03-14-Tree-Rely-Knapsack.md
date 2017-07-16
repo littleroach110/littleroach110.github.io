@@ -9,7 +9,7 @@ description:
 
 ### 1. 树形依赖的背包问题描述
 
-<div>给定n件物品和一个背包，第i件物品的价值是<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />，其体积为<img src="http://latex.codecogs.com/gif.latex?V_i" title="V_i" />，但是依赖于第<img src="http://latex.codecogs.com/gif.latex?X_i" title="X_i" />件物品（必须选取<img src="http://latex.codecogs.com/gif.latex?X_i" title="X_i" />后才能取i，如果无依赖，则必须选取<img src="http://latex.codecogs.com/gif.latex?X_i = 0" title="X_i = 0" />），依赖关系形成森林，背包的容量为C。可以任意选择装入背包中的物品，求装入背包物品的最大总价值。
+<div>给定n件物品和一个背包，第i件物品的价值是<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />，其体积为<img src="http://latex.codecogs.com/gif.latex?V_i" title="V_i" />，但是依赖于第<img src="http://latex.codecogs.com/gif.latex?X_i" title="X_i" />件物品（必须选取<img src="http://latex.codecogs.com/gif.latex?X_i" title="X_i" />后才能取i，如果无依赖，则必须选取<img src="http://latex.codecogs.com/gif.latex?X_i = 0" title="X_i = 0" />），依赖关系形成森林，背包的容量为C。可以任意选择装入背包中的物品，求装入背包物品的最大总价值。</div>
 
 当然，按照ACM比赛的问题的提法（参考hdu1561），该问题还有另外一种提法：ACboy很喜欢玩一种战略游戏，在一个地图上，有N座城堡，每座城堡都有一定的宝物，在每次游戏中ACboy允许攻克M个城堡并获得里面的宝物。但由于地理位置原因，有些城堡不能直接攻克，要攻克这些城堡必须先攻克其他某一个特定的城堡。你能帮ACboy算出要获得尽量多的宝物应该攻克哪M个城堡吗？
 

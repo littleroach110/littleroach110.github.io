@@ -27,7 +27,7 @@ w[i]表示第i件物品的价值；
 
 c[i]表示第i件物品所占的空间/费用。
 
-<div>这个方程是背包问题的核心状态转移方程，“将前i件物品放入容量为v的背包中”这个问题，如果只考虑第i件物品的策略（放或者不放），就可以转化为一个只牵扯前i-1件物品的问题。如果不放第i件物品，那么问题就转化为“前i-1件物品放入容量为v的背包中”，价值为<img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" /> ；如果放入第i件物品，那么问题就转化为"前i-1件物品放入剩下容量为<img src="http://latex.codecogs.com/gif.latex?v-c[i]" title="v-c[i]" /> 的背包中"，此时能获得的最大价值就是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" />再加上通过放入第i件物品获得的价值w[i]。（或者这样理解，当开始计算第i个目标时，计算其最大化的价值，主要有两种可能性：1. 不放入i之前，最大的价值是多少；2. 背包的空间减去i的重量，在这个重量下，最大的价值，再加上i的价值。)
+<div>这个方程是背包问题的核心状态转移方程，“将前i件物品放入容量为v的背包中”这个问题，如果只考虑第i件物品的策略（放或者不放），就可以转化为一个只牵扯前i-1件物品的问题。如果不放第i件物品，那么问题就转化为“前i-1件物品放入容量为v的背包中”，价值为<img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" /> ；如果放入第i件物品，那么问题就转化为"前i-1件物品放入剩下容量为<img src="http://latex.codecogs.com/gif.latex?v-c[i]" title="v-c[i]" /> 的背包中"，此时能获得的最大价值就是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" />再加上通过放入第i件物品获得的价值w[i]。（或者这样理解，当开始计算第i个目标时，计算其最大化的价值，主要有两种可能性：1. 不放入i之前，最大的价值是多少；2. 背包的空间减去i的重量，在这个重量下，最大的价值，再加上i的价值。)</div>
 
 ### 3. 实际案例描述背包问题
 问题描述：有编号分别为a,b,c,d,e 的五件物品，它们的重量分别是2,2,6,5,4，它们的价值分别是6,2,5,4,6，现在给你一个承重为10的背包，如何让背包里装入的物品具有最大的价值总和。
@@ -133,14 +133,14 @@ c[i]表示第i件物品所占的空间/费用。
 
 对于承重为8的背包，a8=15是怎么得出的呢？
 
-<div>根据01背包的状态转换方程，需要考察两个值：一个是<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]" title="f[i-1][j]" /> ，对于这个例子来说，就是b8的值9；另一个是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i]" title="f[i-1][v-c[i]]+w[i]" /> 。在这里，<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]" title="f[i-1][j]" /> 表示我有一个承重为8的背包，当只有b,c,d,e四件可选是，这个背包能装入的最大价值；<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 表示我有一个承重为6的背包（等于当前背包承重减去物品a的重量），当只有物品b,c,d,e四件可选时，这个背包能装入的最大价值。<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 就是指单元格b6，其值为9，w[i]指的是a物品的价值，即6。
+<div>根据01背包的状态转换方程，需要考察两个值：一个是<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]" title="f[i-1][j]" /> ，对于这个例子来说，就是b8的值9；另一个是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i]" title="f[i-1][v-c[i]]+w[i]" /> 。在这里，<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]" title="f[i-1][j]" /> 表示我有一个承重为8的背包，当只有b,c,d,e四件可选是，这个背包能装入的最大价值；<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 表示我有一个承重为6的背包（等于当前背包承重减去物品a的重量），当只有物品b,c,d,e四件可选时，这个背包能装入的最大价值。<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 就是指单元格b6，其值为9，w[i]指的是a物品的价值，即6。</div>
 
-<div>由于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i] = 9+6=15" title="f[i-1][v-c[i]]+w[i] = 9+6=15" /> 大于<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]=9" title="f[i-1][j]=9" /> ，所以物品a应该放入承重为8的背包。
+<div>由于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i] = 9+6=15" title="f[i-1][v-c[i]]+w[i] = 9+6=15" /> 大于<img src="http://latex.codecogs.com/gif.latex?f[i-1][j]=9" title="f[i-1][j]=9" /> ，所以物品a应该放入承重为8的背包。</div>
 
 ### 4. 基于二维数组的代码实现
 该部分的01背包问题的代码实现，主要依赖二维数组，分别使用Python和C++进行程序编写。
 
-><div> python代码实现过程中，使用numpy库实现对二维数组的定义和赋值操作；另外，在Python和C++的代码实现中，考虑到<img src="http://latex.codecogs.com/gif.latex?optimal[i][j] = optimal[i-1][j]" title="optimal[i][j] = optimal[i-1][j]" /> 中的i-1操作，为避免出现数组下标为负值，在定义weight和value时，对weight[0]和value[0]赋值为0。
+<div> python代码实现过程中，使用numpy库实现对二维数组的定义和赋值操作；另外，在Python和C++的代码实现中，考虑到<img src="http://latex.codecogs.com/gif.latex?optimal[i][j] = optimal[i-1][j]" title="optimal[i][j] = optimal[i-1][j]" /> 中的i-1操作，为避免出现数组下标为负值，在定义weight和value时，对weight[0]和value[0]赋值为0。</div>
 
 其中，Python代码实现如下：
 
@@ -234,7 +234,7 @@ the optimal solution is 15
 
 ### 5. 基于一维数组的代码实现
 
-<div>使用一维数组时，01背包问题的本质状态转移方程并没有改变。在使用一维数组f[0...v]，要达到的效果是：第i次循环结束后，f[v]中所表示的就是二维数组时的<img src="http://latex.codecogs.com/gif.latex?f[i][v]" title="f[i][v]" />，即前i个物体面对容量时的最大价值。在二维数组中，可知<img src="http://latex.codecogs.com/gif.latex?f[i][v]" title="f[i][v]" />由两个状态得来: <img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" />和<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i]" title="f[i-1][v-c[i]]+w[i]" />。使用一维数组时，当第i次循环之前时，f[v]实际就是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" />；而对于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" />，当每次循环中，以v=v...0的顺序推f[v]时，就能保证<img src="http://latex.codecogs.com/gif.latex?f[v-c[i]]" title="f[v-c[i]]" />的状态。其状态转移方程为：
+<div>使用一维数组时，01背包问题的本质状态转移方程并没有改变。在使用一维数组f[0...v]，要达到的效果是：第i次循环结束后，f[v]中所表示的就是二维数组时的<img src="http://latex.codecogs.com/gif.latex?f[i][v]" title="f[i][v]" />，即前i个物体面对容量时的最大价值。在二维数组中，可知<img src="http://latex.codecogs.com/gif.latex?f[i][v]" title="f[i][v]" />由两个状态得来: <img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" />和<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]+w[i]" title="f[i-1][v-c[i]]+w[i]" />。使用一维数组时，当第i次循环之前时，f[v]实际就是<img src="http://latex.codecogs.com/gif.latex?f[i-1][v]" title="f[i-1][v]" />；而对于<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" />，当每次循环中，以v=v...0的顺序推f[v]时，就能保证<img src="http://latex.codecogs.com/gif.latex?f[v-c[i]]" title="f[v-c[i]]" />的状态。其状态转移方程为：</div>
 
 <img src="http://latex.codecogs.com/gif.latex?v= V...0; f[v] = max( f[v], f[v-c[i]]+w[i] )" title="v= V...0; f[v] = max( f[v], f[v-c[i]]+w[i] )" />
 
@@ -242,7 +242,7 @@ the optimal solution is 15
 
 <img src="http://latex.codecogs.com/gif.latex?f[i][v]=max(f[i-1][v],f[i-1][v-c[i]]+w[i])" title="f[i][v]=max(f[i-1][v],f[i-1][v-c[i]]+w[i])" />
 
-<div>如上所示，<img src="http://latex.codecogs.com/gif.latex?f[v-c[i]]" title="f[v-c[i]]" /> 相当于二维数组中的<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 。而如果将v的循环顺序由逆序改为顺序，就不是01背包问题，而是完全背包问题，即一个物品可能会重复装入到背包中。举个例子，假如由物品z的容量为2，价值wz很大，背包容量为5，如果v的循环顺序不是逆序，那么外层循环跑到物体z时，内循环在v=2时，物品z被放入背包，当v=4时，寻求最大价值，物品z放入背包，<img src="http://latex.codecogs.com/gif.latex?f[4] = max( f[4], f[2]+ wz)" title="f[4] = max( f[4], f[2]+ wz)" />，后者比前者大，但此时<img src="http://latex.codecogs.com/gif.latex?f[2]+ wz" title="f[2]+ wz" /> 中的f[2]已经装入了一次物体z，这样一来，该物品z被装入背包2次，不符合要求。当使用逆序循环 v = V...0 时，则先计算数组下标较大的f[v]，以此不会发生一个物品被装入2次的情况。
+<div>如上所示，<img src="http://latex.codecogs.com/gif.latex?f[v-c[i]]" title="f[v-c[i]]" /> 相当于二维数组中的<img src="http://latex.codecogs.com/gif.latex?f[i-1][v-c[i]]" title="f[i-1][v-c[i]]" /> 。而如果将v的循环顺序由逆序改为顺序，就不是01背包问题，而是完全背包问题，即一个物品可能会重复装入到背包中。举个例子，假如由物品z的容量为2，价值wz很大，背包容量为5，如果v的循环顺序不是逆序，那么外层循环跑到物体z时，内循环在v=2时，物品z被放入背包，当v=4时，寻求最大价值，物品z放入背包，<img src="http://latex.codecogs.com/gif.latex?f[4] = max( f[4], f[2]+ wz)" title="f[4] = max( f[4], f[2]+ wz)" />，后者比前者大，但此时<img src="http://latex.codecogs.com/gif.latex?f[2]+ wz" title="f[2]+ wz" /> 中的f[2]已经装入了一次物体z，这样一来，该物品z被装入背包2次，不符合要求。当使用逆序循环 v = V...0 时，则先计算数组下标较大的f[v]，以此不会发生一个物品被装入2次的情况。</div>
 
 ### 6. 基于一维数组的代码实现
 
