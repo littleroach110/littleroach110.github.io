@@ -19,6 +19,8 @@ description:
 
 * DiskGenius， 百度网盘下载地址：https://pan.baidu.com/s/1dEXwl4t
 
+* PartitionGuru Pro（英文全功能版DiskGenius），百度网盘下载地址：链接:https://pan.baidu.com/s/1c2pkzeg 密码:vg9e
+
 ### 3. 硬盘恢复步骤
 
 ##### 3.1 使用Winhex对硬盘/磁盘进行制作镜像文件的操作
