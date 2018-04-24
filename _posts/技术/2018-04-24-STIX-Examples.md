@@ -37,11 +37,11 @@ STIX2 定义了十二个SDO（STIX字段对象）
 
 ![STIX Example 04]({{site.CDN_PATH}}/public/image/20180424-STIX-Examples04.png)
 
-身份，个人、组织或团体，以及个人、组织或团体的类别
+身份，个人、组织或团体，以及个人、组织或团体的类别。
 
 ![STIX Example 05]({{site.CDN_PATH}}/public/image/20180424-STIX-Examples05.png)
 
-攻击指标，包含可用于检测可疑或恶意网络行为的模式
+攻击指标，包含可用于检测可疑或恶意网络行为的模式。
 
 ![STIX Example 06]({{site.CDN_PATH}}/public/image/20180424-STIX-Examples06.png)
 
@@ -53,7 +53,7 @@ STIX2 定义了十二个SDO（STIX字段对象）
 
 ![STIX Example 08]({{site.CDN_PATH}}/public/image/20180424-STIX-Examples08.png)
 
-可观察数据，表达在系统或网络上观察到的信息（例如，IP地址）
+可观察数据，表达在系统或网络上观察到的信息（例如，IP地址）。
 
 ![STIX Example 09]({{site.CDN_PATH}}/public/image/20180424-STIX-Examples09.png)
 
