@@ -7,7 +7,7 @@ keywords:
 description:
 ---
 
-﻿# 关于STIX 2.0
+# 关于STIX 2.0
 
 ### 什么是STIX？
 
