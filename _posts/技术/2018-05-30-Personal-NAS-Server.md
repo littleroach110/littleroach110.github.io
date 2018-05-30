@@ -101,7 +101,7 @@ NAS，Network Attached Storage，网络附属存储，基于标准网络协议�
 
 ![Personal NAS Server 13]({{site.CDN_PATH}}/public/image/20180530-Personal-NAS-SERVER13.png)
 
-(2) 硬盘，1个固态硬盘+4个SATA希捷硬盘，京东购买，出故障退换货方便
+(2) 硬盘
 
 NAS系统中，硬盘可分为部署NAS系统硬盘和存储硬盘。
 
