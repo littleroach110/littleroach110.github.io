@@ -46,3 +46,37 @@ print(result)
 ```
 
 其中，dsl为elasticseach查询语句，即可实现Python对Elasticsearch进行调用，同时使用了用户名和密码进行身份认证。
+
+### 2.3 取消用户名和密码认证
+
+如果需要取消用户名和密码认证操作，只需要修改```elasticsearch.yml```配置文件，将
+
+```
+xpack.security.enabled: true
+
+xpack.security.transport.ssl.enabled: true
+
+xpack.security.transport.ssl.verification_mode: certificate
+
+xpack.security.transport.ssl.keystore.path: leon-elastic-certificates.p12
+
+xpack.security.transport.ssl.truststore.path: leon-elastic-certificates.p12
+
+```
+
+修改为：
+
+```
+xpack.security.enabled: false
+
+# xpack.security.transport.ssl.enabled: true
+
+# xpack.security.transport.ssl.verification_mode: certificate
+
+# xpack.security.transport.ssl.keystore.path: leon-elastic-certificates.p12
+
+# xpack.security.transport.ssl.truststore.path: leon-elastic-certificates.p12
+
+```
+
+重新启动Elasticsearch，即可。
