@@ -47,4 +47,6 @@ locals:
   archive: 归档
 
 # CDN加速网站路径
-CDN_PATH: http://ol8zepzvp.bkt.clouddn.com
+# CDN_PATH: http://ol8zepzvp.bkt.clouddn.com
+
+CDN_PATH:http://littleroach110.net
